@@ -81,7 +81,7 @@ proceedToPaymentBtn.addEventListener('click', () => {
 
 async function submitOrder(paymentMethod) {
     try {
-        const response = await fetch('http://localhost:3000/order', {
+        const response = await fetch('https://food-order-backend-1bbl.onrender.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -6,11 +6,8 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
-const KEYFILEPATH = path.join(__dirname, 'credentials.json');
-const SPREADSHEET_ID = 'https://docs.google.com/spreadsheets/d/1X4cCQUwMmTZ_Rwo7HDPZX400CMR3ZxvV1G3hMWhWUsk/edit?usp=sharing'; // Yahan apni Google Sheet ID daalein
-
 const auth = new google.auth.GoogleAuth({
-    keyFile: KEYFILEPATH,
+    credentials: JSON.parse(process.env.GOOGLE_CREDENTIALS),
     scopes: ['https://www.googleapis.com/auth/spreadsheets'],
 });
 

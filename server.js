@@ -1,5 +1,31 @@
 const express = require('express');
 const cors = require('cors');
+const app = express();
+const { google } = require('googleapis');
+
+app.use(express.json());
+app.use(cors());
+
+const auth = new google.auth.GoogleAuth({
+    credentials: JSON.parse(process.env.GOOGLE_CREDENTIALS),
+    scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+});
+
+const SPREADSHEET_ID = 'YOUR_SPREADSHEET_ID'; // Yahan apni Spreadsheet ID daalein
+
+app.post('/order', async (req, res) => {
+    // ... baaki ka code
+});
+
+app.get('/orders', async (req, res) => {
+    // ... baaki ka code
+});
+
+app.listen(port, () => {
+    console.log(`Server is running at http://localhost:${port}`);
+});
+const express = require('express');
+const cors = require('cors');
 const { google } = require('googleapis');
 const path = require('path');
 

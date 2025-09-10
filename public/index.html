@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ordering</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Food Ordering App</h1>
+        <div id="menu">
+            </div>
+
+        <div id="summary" class="hidden">
+            <h2>Order Summary</h2>
+            <div id="order-details"></div>
+            <h3>Total Price: <span id="total-price">₹0</span></h3>
+            <button id="proceed-to-payment">Proceed to Payment</button>
+        </div>
+
+        <div id="payment" class="hidden">
+            <h2>Payment Options</h2>
+            <button id="pay-upi" class="payment-btn">Pay via UPI</button>
+            <button id="pay-cod" class="payment-btn">Cash on Delivery (COD)</button>
+        </div>
+        
+        <div id="status" class="hidden">
+            <h2>Order Status</h2>
+            <p id="order-message"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
